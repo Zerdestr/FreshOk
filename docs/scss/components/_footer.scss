@@ -1,0 +1,56 @@
+.footer {
+  background-color: $dark-800;
+  padding: 30px 0 24px;
+  color: $white;
+
+  .logo {
+    margin-bottom: 30px;
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__subscription {
+    max-width: 307px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 150px;
+    height: max-content;
+  }
+
+  &__label {
+    margin-bottom: 18px;
+    line-height: 1;
+  }
+
+  &__input {
+    padding: 12px;
+    background-color: $white;
+    border-radius: 6px 0px 0px 6px;
+    line-height: 1;
+    height: 40px;
+    width: 180px;
+
+    &::placeholder {
+      line-height: 1;
+      color: $dark-400;
+    }
+  }
+
+  &__button {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    padding: 12px 16px;
+    background-color: $green-900;
+    width: 126px;
+    height: 40px;
+    border-radius: 0px 6px 6px 0px;
+  }
+}
+
+.info-list {
+  column-count: 3;
+}

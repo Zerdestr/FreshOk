@@ -1,0 +1,19 @@
+.logo {
+  display: block;
+  min-width: 200px;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 3px;
+  margin-right: 24px;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    outline: 3px solid $green-100;
+  }
+
+  &:active {
+    outline: none;
+  }
+}
