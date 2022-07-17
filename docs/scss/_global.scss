@@ -1,0 +1,46 @@
+body {
+  position: relative;
+  font-family: "OpenSans", "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  background-color: $white;
+  color: $dark-500;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color: $dark, $alpha: 0);
+    pointer-events: none;
+    z-index: 12;
+    transition: background-color 0.3s ease;
+  }
+
+  &.no-scroll {
+    overflow: hidden;
+    &::before {
+      background-color: rgba($color: $dark, $alpha: 0.66);
+      pointer-events: auto;
+    }
+  }
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1320px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
