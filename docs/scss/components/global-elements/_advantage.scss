@@ -1,0 +1,29 @@
+.advantage {
+  display: flex;
+  justify-content: center;
+  padding: 48px 0 29px;
+  background-color: $silver-100;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    max-width: 264px;
+    padding-left: 74px;
+    background-size: 50px 50px;
+    background-position: left top;
+    background-repeat: no-repeat;
+
+    &:not(:last-child) {
+      margin-right: 65px;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 16px;
+    color: $dark-900;
+    margin-bottom: 7px;
+  }
+}

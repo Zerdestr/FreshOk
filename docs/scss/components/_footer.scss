@@ -5,17 +5,20 @@
 
   .logo {
     margin-bottom: 30px;
+    display: inline-block;
   }
 
   &__content {
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
   }
 
   &__subscription {
     max-width: 307px;
     display: flex;
     flex-wrap: wrap;
-    margin-right: 150px;
+    margin-right: auto;
     height: max-content;
   }
 
@@ -36,6 +39,10 @@
       line-height: 1;
       color: $dark-400;
     }
+
+    &:focus {
+      outline: 3px solid $green-200;
+    }
   }
 
   &__button {
@@ -48,9 +55,172 @@
     width: 126px;
     height: 40px;
     border-radius: 0px 6px 6px 0px;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: rgba($color: $green-900, $alpha: 0.85);
+    }
+
+    &:focus {
+      outline: 3px solid $green-200;
+    }
+
+    &:active {
+      color: rgba($color: $white, $alpha: 0.5);
+      opacity: 1;
+      box-shadow: inset 0px 4px 4px rgba($color: $dark, $alpha: 0.25);
+      outline: transparent;
+    }
+  }
+
+  &__info-list {
+    column-count: 3;
+    column-gap: 75px;
+    margin-right: auto;
+  }
+
+  &__bottom {
+    border-top: 1px solid rgba($color: $white, $alpha: 0.1);
+    padding-top: 24px;
+  }
+
+  &__bottom-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__payment {
+    display: flex;
+  }
+
+  &__payment-item {
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+
+  &__payment-link {
+    transition: opacity 0.3s ease-in-out;
+    display: block;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:focus {
+      border-radius: 3px;
+      outline: 3px solid $green-100;
+    }
+
+    &:active {
+      color: $green-100;
+      outline: none;
+    }
   }
 }
 
 .info-list {
-  column-count: 3;
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__link {
+    transition: opacity 0.3s ease-in-out;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:focus {
+      border-radius: 3px;
+      outline: 3px solid $green-100;
+    }
+
+    &:active {
+      color: $green-100;
+      outline: none;
+    }
+  }
+}
+
+.contacts {
+  &__list {
+    margin-bottom: 18px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__hotline {
+    margin-right: 10px;
+    font-style: normal;
+  }
+
+  &__link {
+    transition: opacity 0.3s ease-in-out;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:focus {
+      border-radius: 3px;
+      outline: 3px solid $green-200;
+    }
+
+    &:active {
+      outline: transparent;
+    }
+  }
+
+  &__media {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__media-item {
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+
+  &__media-link {
+    display: block;
+    width: 32px;
+    height: 32px;
+    transition: opacity 0.3s ease-in-out;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:focus {
+      border-radius: 3px;
+      outline: 3px solid $green-200;
+    }
+
+    &:active {
+      outline: transparent;
+
+      .contacts__media-icon {
+        background-color: $green-200;
+      }
+    }
+  }
+
+  &__media-icon {
+    display: block;
+    height: 100%;
+    background-color: $white;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 32px 32px;
+    transition: background-color 0.25s ease;
+  }
 }

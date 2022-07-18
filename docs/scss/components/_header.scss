@@ -50,15 +50,15 @@
 
     &:focus {
       border-radius: 3px;
-      outline: 3px solid $green-100;
+      outline: 3px solid $green-200;
     }
 
     &:active {
-      color: $green-100;
+      color: $green-200;
       outline: none;
 
       .header__top-icon {
-        fill: $green-100;
+        fill: $green-200;
       }
     }
   }
@@ -135,7 +135,7 @@
       padding: 15px 24px;
       background-color: $white;
       transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
-      border: 1px solid $grey-300;
+      border: 1px solid $silver-200;
 
       &:last-child {
         border-radius: 0 0 6px 6px;
