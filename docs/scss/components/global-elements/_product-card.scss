@@ -77,31 +77,7 @@
   }
 
   &__badge {
-    border-radius: 6px;
-    font-weight: 700;
-    font-size: 10px;
-    line-height: 1;
-    color: $white;
-    padding: 3px 6px;
-    text-align: center;
     display: none;
-    width: max-content;
-    margin-bottom: 6px;
-
-    &--novelty {
-      background-color: $green-900;
-      display: flex;
-    }
-
-    &--discount {
-      background-color: $red-900;
-      display: flex;
-    }
-
-    &--best-seller {
-      background-color: $orange-900;
-      display: flex;
-    }
   }
 
   &__favorite {
@@ -163,6 +139,11 @@
     padding: 10px 18px 18px;
   }
 
+  &__price-tag {
+    align-self: flex-end;
+    margin-right: auto;
+  }
+
   &__price-old {
     color: $silver-600;
     position: relative;
@@ -185,11 +166,10 @@
       transform: rotate(-15deg);
     }
   }
+
   &__price {
     display: block;
     line-height: 1;
-    align-self: flex-end;
-    margin-right: auto;
   }
 
   .counter {

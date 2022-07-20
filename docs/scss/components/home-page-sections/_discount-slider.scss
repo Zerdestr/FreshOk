@@ -29,25 +29,25 @@
 
   &__content {
     width: 100%;
+  }
 
-    h2 {
-      font-family: "Ruda";
-      font-weight: 900;
-      font-size: 60px;
-      line-height: 1.3;
-      text-transform: uppercase;
-      max-width: 762px;
-      margin-bottom: 12px;
+  &__title {
+    font-family: "Ruda";
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 1.3;
+    text-transform: uppercase;
+    max-width: 762px;
+    margin-bottom: 12px;
 
-      span {
-        color: $red-900;
-      }
+    span {
+      color: $red-900;
     }
+  }
 
-    p {
-      font-size: 16px;
-      margin-bottom: 32px;
-    }
+  &__text {
+    font-size: 16px;
+    margin-bottom: 32px;
   }
 
   .swipers-pagination {
@@ -112,4 +112,3 @@
     right: 60px;
   }
 }
-

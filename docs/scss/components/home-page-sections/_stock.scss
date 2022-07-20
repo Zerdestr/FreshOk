@@ -1,0 +1,135 @@
+.stock {
+  padding: 72px;
+  background-color: $silver-300;
+
+  .title {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .filter-products__button--active {
+    &::after {
+      background-color: rgba($color: $green-900, $alpha: 0.2);
+    }
+  }
+
+  .button {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.stock-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  margin-bottom: 50px;
+
+  &__link {
+    position: relative;
+    display: flex;
+    padding: 12px;
+    background-color: $white;
+    border: 1px solid $silver-600;
+    border-radius: 6px;
+    transition: border-color 0.3s ease-in-out;
+
+    &:hover {
+      border-color: $green-900;
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+  }
+
+  &__image {
+    object-fit: contain;
+    margin-right: 13px;
+  }
+
+  &__wrapper {
+    max-width: 164px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 14px;
+    color: $dark-900;
+    margin-bottom: auto;
+    @include line-clamp(3);
+  }
+
+  &__availability {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 1;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+
+    &--stock {
+      color: $green-900;
+    }
+
+    &--running-out {
+      color: $red-900;
+    }
+
+    &--ended {
+      color: $silver-600;
+    }
+  }
+
+  &__price-tag {
+    display: flex;
+    align-items: center;
+  }
+
+  &__price {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    margin-right: 10px;
+
+    span {
+      font-size: 12px;
+    }
+  }
+
+  &__price-old {
+    font-size: 12px;
+    line-height: 100%;
+    color: $silver-600;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0px;
+      bottom: 5px;
+      height: 1px;
+      background-color: #c1c1c1;
+      -webkit-transform: rotate(-15deg);
+      -ms-transform: rotate(-15deg);
+      transform: rotate(-15deg);
+    }
+  }
+
+  &__rating {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    font-weight: 700;
+    line-height: 1;
+    padding-right: 18px;
+    background-image: url("../images/icons/rating-star.svg");
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: right center;
+  }
+}
