@@ -1,0 +1,234 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 300px;
+  min-height: 410px;
+  border: 1px solid rgba($color: $dark-900, $alpha: 0.2);
+  border-radius: 6px;
+  padding-top: 57px;
+  position: relative;
+
+  &:hover {
+    .product-card__link {
+    }
+  }
+
+  &__link {
+    position: relative;
+    margin-bottom: 17px;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: transparent;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    &:hover {
+      &::after {
+        background-color: rgba($color: $dark, $alpha: 0.1);
+      }
+
+      .product-card__hover {
+        transform: translateX(-50%) translateY(-50%);
+      }
+    }
+  }
+
+  &__hover {
+    position: absolute;
+    z-index: 2;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(500%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &__hover-icon {
+    width: 20px;
+    height: 20px;
+    fill: $green-900;
+  }
+
+  &__image {
+    object-fit: contain;
+  }
+
+  &__badges {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__badge {
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 1;
+    color: $white;
+    padding: 3px 6px;
+    text-align: center;
+    display: none;
+    width: max-content;
+    margin-bottom: 6px;
+
+    &--novelty {
+      background-color: $green-900;
+      display: flex;
+    }
+
+    &--discount {
+      background-color: $red-900;
+      display: flex;
+    }
+
+    &--best-seller {
+      background-color: $orange-900;
+      display: flex;
+    }
+  }
+
+  &__favorite {
+    position: absolute;
+    top: 9px;
+    right: 6px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--active {
+      .product-card__favorite-icon {
+        fill: $yellow;
+      }
+    }
+
+    &:hover {
+      .product-card__favorite-icon {
+        fill: $yellow;
+      }
+    }
+
+    &:focus {
+      outline: 3px solid $green-200;
+      border-radius: 3px;
+    }
+
+    &:active {
+      outline: transparent;
+
+      .product-card__favorite-icon {
+        fill: rgba($color: $yellow, $alpha: 0.5);
+      }
+    }
+  }
+
+  &__favorite-icon {
+    fill: $silver-600;
+    width: 32px;
+    height: 28px;
+    transition: fill 0.3s ease-in-out;
+  }
+
+  &__title {
+    color: $dark-900;
+    margin-bottom: auto;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 0 18px;
+    @include line-clamp(3);
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 18px 18px;
+  }
+
+  &__price-old {
+    color: $silver-600;
+    position: relative;
+    display: none;
+    line-height: 1;
+    margin-bottom: 5px;
+
+    &--active {
+      display: inline-block;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: -8px;
+      bottom: 8px;
+      height: 1px;
+      background-color: $silver-600;
+      transform: rotate(-15deg);
+    }
+  }
+  &__price {
+    display: block;
+    line-height: 1;
+    align-self: flex-end;
+    margin-right: auto;
+  }
+
+  .counter {
+    margin-right: 24px;
+  }
+
+  &__add {
+    width: 32px;
+    height: 32px;
+    background-color: $green-900;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: rgba($color: $dark-green-900, $alpha: 0.85);
+    }
+
+    &:focus {
+      outline: 3px solid $green-200;
+    }
+
+    &:active {
+      opacity: 1;
+      box-shadow: inset 0px 4px 4px rgba($color: $dark, $alpha: 0.25);
+      outline: transparent;
+
+      .product-card__icon {
+        fill: rgba($color: $white, $alpha: 0.5);
+      }
+    }
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    fill: $white;
+    fill: background-color 0.3s ease-in-out;
+  }
+}

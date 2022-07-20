@@ -7,8 +7,11 @@
 @import 'components/global-elements/sr-only';
 @import 'components/global-elements/custom-checkbox';
 @import 'components/global-elements/burger';
+@import 'components/global-elements/button';
 @import 'components/global-elements/advantage';
 @import 'components/global-elements/title';
+@import 'components/global-elements/product-card';
+@import 'components/global-elements/counter';
 
 
 @import 'components/header';
@@ -16,5 +19,6 @@
 
 
 @import 'components/home-page-sections/discount-slider';
+@import 'components/home-page-sections/top-products';
 @import 'components/home-page-sections/brands';
 @import 'components/home-page-sections/news';

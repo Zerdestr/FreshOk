@@ -1,11 +1,20 @@
 $(function () {
+  $(document)
+    .on('click', '.product-card__favorite', function () {
+      $(this).toggleClass('product-card__favorite--active')
+    })
 
-  $('.header__catalog').styler();
+
+
+  $('.header__catalog, .counter').styler();
 
   const discountSwiper = new Swiper('.discount-swiper', {
 
 
     loop: true,
+    autoplay: {
+      delay: 5000,
+    },
 
     wrapperClass: 'discount-swiper__wrapper',
 
