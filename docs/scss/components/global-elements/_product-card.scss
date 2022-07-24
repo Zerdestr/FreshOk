@@ -142,6 +142,8 @@
   &__price-tag {
     align-self: flex-end;
     margin-right: auto;
+    display: flex;
+    flex-direction: column;
   }
 
   &__price-old {
@@ -149,7 +151,7 @@
     position: relative;
     display: none;
     line-height: 1;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 
     &--active {
       display: inline-block;

@@ -30,7 +30,7 @@
 
         </ul>
 
-        <nav class="header__nav">
+        <nav class="header__top-nav">
           <ul class="header__nav-list">
 
             <li class="header__nav-item">
@@ -68,7 +68,7 @@
 
       </a>
 
-      <form class="header__form" action="#">
+      <div class="header__nav">
 
         <select class="header__catalog" data-placeholder="Каталог продуктов" name="" id="">
 
@@ -90,7 +90,7 @@
 
         <div class="header__search-bar">
 
-         
+
           <input class="header__input" type="text" placeholder="Найти в магазине ...">
           <button class="header__button">ПОИСК</button>
 
@@ -115,7 +115,7 @@
             </button>
           </li>
 
-          <li class="user-memu__item">
+          <li class="user-memu__item user-memu__item--busket">
             <button class="user-memu__button">
               <svg class="user-memu__icon">
                 <use xlink:href="images/sprite.svg#icon-basket"></use>
@@ -126,7 +126,95 @@
 
         </ul>
 
-      </form>
+        <div class="heade__basket basket">
+
+          <button class="basket__close">
+            <svg class="basket__close-icon">
+              <use xlink:href="images/sprite.svg#icon-basket-close"></use>
+            </svg>
+          </button>
+
+          <div class="basket__top">
+
+            <span class="basket__title">Корзина</span>
+
+            <button class="basket__clear" type="button">очистить корзину</button>
+
+          </div>
+
+
+          <ul class="basket__list">
+
+            <li class="basket__item basket-item">
+
+              <button class="basket-item__close" type="button"> 
+                <svg class="basket-item__close-icon">
+                  <use xlink:href="images/sprite.svg#icon-basket-close"></use>
+                </svg>
+              </button>
+
+              <a class="basket-item__link" href="#">
+
+                <img class="basket-item__image" src="../images/product-card/product-card-1.png" alt="Фото товара"
+                  width="60" height="60">
+
+                <div class="basket-item__info">
+
+                  <div class="basket-item__text">Ананас, 1 кг</div>
+
+                  <span class="basket-item__cost">99<span>₴</span></span>
+
+                </div>
+
+              </a>
+
+              <input class="counter" type="number" min="1" max="99" value="1"></input>
+
+              <span class="basket-item__total-cost">198<span>₴</span></span>
+
+            </li>
+
+            <li class="basket__item basket-item">
+
+              <button class="basket-item__close" type="button">
+                <svg class="basket-item__close-icon">
+                  <use xlink:href="images/sprite.svg#icon-basket-close"></use>
+                </svg>
+              </button>
+
+              <a class="basket-item__link" href="#">
+
+                <img class="basket-item__image" src="../images/product-card/product-card-3.png" alt="Фото товара"
+                  width="60" height="60">
+
+                <div class="basket-item__info">
+
+                  <div class="basket-item__text">Питахайя красная с белой мякотью, 1шт</div>
+
+                  <span class="basket-item__cost">101<span>₴</span></span>
+
+                </div>
+
+              </a>
+
+              <input class="counter" type="number" min="1" max="99" value="1"></input>
+
+              <span class="basket-item__total-cost">202<span>₴</span></span>
+
+            </li>
+
+          </ul>
+
+          <div class="basket__sum">
+            <span class="basket__sum-text">Товаров на сумму</span>
+            <span class="basket__sum-price">400<span>₴</span></span>
+          </div>
+
+          <a href="#" class="button basket__checkout">Оформить заказ</a>
+
+        </div>
+
+      </div>
 
     </div>
   </div>

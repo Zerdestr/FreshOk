@@ -9,21 +9,21 @@ body {
 
   &::before {
     content: "";
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: rgba($color: $dark, $alpha: 0);
     pointer-events: none;
-    z-index: 12;
+    z-index: 10;
     transition: background-color 0.3s ease;
   }
 
   &.no-scroll {
     overflow: hidden;
     &::before {
-      background-color: rgba($color: $dark, $alpha: 0.66);
+      background-color: rgba($color: $dark, $alpha: 0.15);
       pointer-events: auto;
     }
   }
@@ -37,6 +37,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .container {

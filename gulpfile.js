@@ -15,7 +15,6 @@ const fileInclude = require('gulp-file-include');
 
 
 
-
 const htmlInclude = () => {
   return src(['docs/html/*.html']) 								
     .pipe(fileInclude({
@@ -45,7 +44,7 @@ function svgSprites() {
       parserOptions: { xmlMode: true },
     })
     )
-    .pipe(replace('&gt;', '>')) // боремся с заменой символа 
+    .pipe(replace('&gt;', '>')) 
     .pipe(
       svgSprite({
         mode: {
@@ -81,6 +80,7 @@ function styles() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
+    'node_modules/mixitup/dist/mixitup.min.js',
     'node_modules/swiper/swiper-bundle.min.js',
     'node_modules/rateyo/src/jquery.rateyo.js',
     'node_modules/jquery-form-styler/dist/jquery.formstyler.min.js',
