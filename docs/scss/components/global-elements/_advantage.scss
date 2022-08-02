@@ -1,11 +1,24 @@
 .advantage {
   display: flex;
   justify-content: center;
-  padding: 48px 0 29px;
+  padding: 48px 0 30px;
   background-color: $silver-100;
+
+  @include mq("phone") {
+    padding: 30px 0;
+  }
 
   &__list {
     display: flex;
+
+    @include mq("tablet") {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    @include mq("phone") {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -15,8 +28,23 @@
     background-position: left top;
     background-repeat: no-repeat;
 
+    @include mq("tablet") {
+      max-width: 100%;
+    }
+
     &:not(:last-child) {
       margin-right: 65px;
+
+      @include mq("tablet") {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+
+    &:first-child {
+      @include mq("tablet") {
+        margin-right: 10px;
+      }
     }
   }
 

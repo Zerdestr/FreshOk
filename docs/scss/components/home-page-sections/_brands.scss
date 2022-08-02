@@ -1,10 +1,36 @@
 .brands {
   padding: 72px 0;
 
+  @include mq("tablet") {
+    padding: 62px 0;
+  }
+
+  @include mq("phone") {
+    padding: 48px 0;
+  }
+
   &__list {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @include mq("tablet-2") {
+      justify-content: flex-start;
+      padding: 0 45px;
+    }
+  }
+
+  &__item {
+    min-width: max-content;
+
+    &:not(:last-child) {
+      margin-right: 93px;
+    }
   }
 
   &__link {
@@ -12,6 +38,10 @@
     transition: opacity 0.3s ease-in-out;
 
     &:hover {
+      opacity: 1;
+    }
+
+    @include mq("tablet-2") {
       opacity: 1;
     }
   }

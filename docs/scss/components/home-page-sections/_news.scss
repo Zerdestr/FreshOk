@@ -1,11 +1,30 @@
 .news {
   padding-bottom: 72px;
 
+  @include mq("tablet") {
+    padding-bottom: 58px;
+  }
+
+  @include mq("phone") {
+    padding-bottom: 42px;
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
+
+    @include mq("phone") {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .title {
+    @include mq("phone") {
+      margin-bottom: 12px;
+    }
   }
 
   &__link {
@@ -16,6 +35,10 @@
     position: relative;
     transition: color 0.3s ease-in-out;
 
+    @include mq("phone") {
+      line-height: 1;
+    }
+
     &::after {
       content: "";
       position: absolute;
@@ -25,6 +48,10 @@
       height: 2px;
       background-color: $green-900;
       transition: background-color 0.3s ease-in-out;
+
+      @include mq("phone") {
+        bottom: -6px;
+      }
     }
 
     &:hover {
@@ -50,11 +77,33 @@
 
   &__list {
     display: flex;
+
+    @include mq("tablet-2") {
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
+    @include mq("tablet-2") {
+      margin: 0 15px;
+    }
+
+    @include mq("phone") {
+      margin: 0;
+    }
+
     &:not(:last-child) {
       margin-right: 30px;
+
+      @include mq("tablet-2") {
+        margin-right: 15px;
+        margin-bottom: 15px;
+      }
+
+      @include mq("phone") {
+        margin-right: 0;
+      }
     }
   }
 }
@@ -68,6 +117,10 @@
   box-shadow: 0px 3px 3px rgba($color: $dark, $alpha: 0.25);
   position: relative;
   color: $dark-900;
+
+  @include mq("phone") {
+    min-height: auto;
+  }
 
   &:hover {
     .news-card__text {
@@ -115,7 +168,11 @@
     font-size: 16px;
     line-height: 1.5;
     transition: color 0.3s ease-in-out;
-
     @include line-clamp(3);
+
+    @include mq("phone") {
+      font-size: 14px;
+      line-height: 1.4;
+    }
   }
 }

@@ -21,4 +21,12 @@
     outline: transparent;
     background-color: $green-900;
   }
+
+  @include mq("tablet") {
+    font-size: 16px;
+  }
+
+  @include mq("phone") {
+    font-size: 14px;
+  }
 }

@@ -8,10 +8,14 @@
   border-radius: 6px;
   padding-top: 57px;
   position: relative;
+  transition: border-color 0.3s ease-in-out;
 
   &:hover {
-    .product-card__link {
-    }
+    border-color: $green-900;
+  }
+
+  @include mq("phone") {
+    min-height: 344px;
   }
 
   &__link {
@@ -54,7 +58,7 @@
     border-radius: 50%;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(500%);
+    transform: translateX(-50%) translateY(-50%) scale(0);
     transition: transform 0.3s ease-in-out;
   }
 
@@ -66,6 +70,11 @@
 
   &__image {
     object-fit: contain;
+
+    @include mq("phone") {
+      width: 170px;
+      height: 120px;
+    }
   }
 
   &__badges {
@@ -137,6 +146,11 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 18px 18px;
+
+    @include mq("phone") {
+      flex-wrap: wrap;
+      padding: 10px 12px 12px;
+    }
   }
 
   &__price-tag {
@@ -144,6 +158,10 @@
     margin-right: auto;
     display: flex;
     flex-direction: column;
+
+    @include mq("phone") {
+      order: 1;
+    }
   }
 
   &__price-old {
@@ -174,8 +192,22 @@
     line-height: 1;
   }
 
+  &__counter {
+    @include mq("phone") {
+      order: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+  }
+
   .counter {
     margin-right: 24px;
+
+    @include mq("phone") {
+      margin-right: 0;
+    }
   }
 
   &__add {
@@ -204,6 +236,10 @@
       .product-card__icon {
         fill: rgba($color: $white, $alpha: 0.5);
       }
+    }
+
+    @include mq("phone") {
+      order: 2;
     }
   }
 

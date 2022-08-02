@@ -1,4 +1,7 @@
 .discount-slider {
+  &--header-fixed {
+    padding-top: 160px;
+  }
 }
 
 .discount-swiper {
@@ -19,12 +22,24 @@
     background-size: cover;
     background-position: center center;
     min-height: 600px;
+
+    @include mq("tablet") {
+      min-height: 400px;
+    }
+
+    @include mq("phone") {
+      min-height: 320px;
+    }
   }
 
   .container--slide {
     padding: 24px;
     border-radius: 3px;
     background-color: rgba($color: $white, $alpha: 0.8);
+
+    @include mq("phone") {
+      padding: 24px 15px;
+    }
   }
 
   &__content {
@@ -43,6 +58,14 @@
     span {
       color: $red-900;
     }
+
+    @include mq("tablet") {
+      font-size: 40px;
+    }
+
+    @include mq("phone") {
+      font-size: 20px;
+    }
   }
 
   &__text {
@@ -57,6 +80,10 @@
     bottom: 16px;
     max-width: max-content;
     transform: translateX(-50%);
+
+    @include mq("tablet") {
+      display: flex;
+    }
   }
 
   .swipers__pagination-bullet {
@@ -101,6 +128,15 @@
     &:active {
       opacity: 0.8;
       outline: transparent;
+    }
+
+    @include mq("monitor") {
+      top: auto;
+      bottom: 0;
+    }
+
+    @include mq("tablet") {
+      display: none;
     }
   }
 

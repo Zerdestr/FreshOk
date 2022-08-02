@@ -1,10 +1,22 @@
 .stock {
-  padding: 72px;
+  padding: 72px 0;
   background-color: $silver-300;
+
+  @include mq("tablet") {
+    padding: 58px 0;
+  }
+
+  @include mq("phone") {
+    padding: 48px 0;
+  }
 
   .title {
     text-align: center;
     margin-bottom: 32px;
+
+    @include mq("phone") {
+      margin-bottom: 24px;
+    }
   }
 
   .filter-products__button--active {
@@ -24,6 +36,21 @@
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
   margin-bottom: 50px;
+
+  @include mq("tablet-3") {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: max-content;
+    margin: 0 auto 50px;
+  }
+
+  @include mq("tablet-2") {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+  }
+
+  @include mq("phone") {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
   &__link {
     position: relative;

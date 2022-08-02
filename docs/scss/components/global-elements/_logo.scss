@@ -1,6 +1,6 @@
 .logo {
-  display: block;
-  min-width: 200px;
+  display: flex;
+  align-items: center;
   transition: opacity 0.3s ease-in-out;
   border-radius: 3px;
   margin-right: 24px;
@@ -15,5 +15,19 @@
 
   &:active {
     outline: none;
+  }
+
+  &__monitor {
+    @include mq("phone") {
+      display: none;
+    }
+  }
+
+  &__phone {
+    display: none;
+
+    @include mq("phone") {
+      display: inline-block;
+    }
   }
 }

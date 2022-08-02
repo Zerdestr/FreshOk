@@ -1,16 +1,20 @@
 <footer class="footer">
+
   <div class="container">
+
     <a class="logo" href="#">
 
       <img src="./images/logo.svg" width="200" height="60" alt="Логотип">
 
     </a>
+
     <div class="footer__content">
 
-      <form class="footer__subscription">
-        <span class="footer__label">Следите за нашими акциями</span>
+      <form class="footer__subscription" action="#">
 
-        <input class="footer__input" id="footer-input" type="email" placeholder="email@email.com">
+        <label class="footer__label" for="footer-input">Следите за нашими акциями</label>
+
+        <input class="footer__input" id="footer-input" type="email" placeholder="email@email.com" required>
 
         <button class="footer__button" type="submit">ПОДПИСАТЬСЯ</button>
       </form>
@@ -42,19 +46,26 @@
         </li>
       </ul>
 
-      <address class="contacts footer__contacts ">
+      <address class="contacts">
 
         <ul class="contacts__list">
 
           <li class="contacts__item">
-            <span class="contacts__hotline">
+            <span class="sr-only">
               Горячая линия:
             </span>
-            <a class="contacts__link" href="tel:+380501112233">+38 050 111 22 33</a>
+
+            <a class="contacts__link contacts__link--phone" href="tel:+380501112233">+38 050 111 22 33</a>
           </li>
 
           <li class="contacts__item">
-            <a class="contacts__link" href="#">Запорожье, ул. Т.Г. Шевченко, 1</a>
+
+            <span class="sr-only">
+              Наш адрес
+            </span>
+
+            <a class="contacts__link contacts__link--adress" href="#">
+              Запорожье, ул. Т.Г. Шевченко, 1</a>
           </li>
 
         </ul>
@@ -63,24 +74,28 @@
 
           <li class="contacts__media-item">
             <a class="contacts__media-link" href="#">
+              <span class="sr-only">Наш фейсбук</span>
               <span class="contacts__media-icon" style="-webkit-mask-image:url('./images/icons/facebook.svg');"></span>
             </a>
           </li>
 
           <li class="contacts__media-item">
             <a class="contacts__media-link" href="#">
+              <span class="sr-only">Наш ютуб канал</span>
               <span class="contacts__media-icon" style="-webkit-mask-image:url('./images/icons/youtube.svg');"></span>
             </a>
           </li>
 
           <li class="contacts__media-item">
             <a class="contacts__media-link" href="#">
+              <span class="sr-only">Наш телеграмм</span>
               <span class="contacts__media-icon" style="-webkit-mask-image:url('./images/icons/telegram.svg');"></span>
             </a>
           </li>
 
           <li class="contacts__media-item">
             <a class="contacts__media-link" href="#">
+              <span class="sr-only">Наш инстаграмм</span>
               <span class="contacts__media-icon" style="-webkit-mask-image:url('./images/icons/instagram.svg');"></span>
             </a>
           </li>

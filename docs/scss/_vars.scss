@@ -21,6 +21,7 @@ $breakpoints: (
   "tablet": 768px,
   "tablet-2": 992px,
   "tablet-3": 1200px,
+  "monitor": 1600px,
 );
 
 @mixin mq($width, $type: max) {
@@ -46,5 +47,14 @@ $breakpoints: (
     display: -webkit-box;
     -webkit-line-clamp: $lines;
     -webkit-box-orient: vertical;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

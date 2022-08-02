@@ -1,22 +1,40 @@
 .banners {
   padding-bottom: 72px;
 
+  @include mq("tablet") {
+    padding-bottom: 58px;
+  }
+
+  @include mq("phone") {
+    padding-bottom: 48px;
+  }
+
   &__list {
     display: flex;
+    justify-content: space-between;
+
+    @include mq("tablet-2") {
+      flex-direction: column;
+    }
   }
 
   &__item {
     max-width: 630px;
-    min-width: 300px;
-    max-height: 300px;
-    border-radius: 6px;
-    box-shadow: 0px 4px 4px rgba($color: $dark, $alpha: 0.25);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left top;
 
     &:not(:last-child) {
-      margin-right: 30px;
+      margin-right: 15px;
+
+      @include mq("tablet-2") {
+        margin: 0 auto 12px;
+      }
+    }
+
+    @include mq("tablet-2") {
+      margin: 0 auto;
+      width: 100%;
     }
 
     &--first {
@@ -30,6 +48,14 @@
       .banners__title {
         max-width: 346px;
         text-shadow: 2px 2px 0px rgba($color: $dark, $alpha: 0.25);
+
+        @include mq("tablet-2") {
+          max-width: 100%;
+        }
+
+        @include mq("phone") {
+          max-width: 260px;
+        }
       }
 
       .banners__link {
@@ -40,12 +66,28 @@
         }
       }
     }
-
   }
 
   &__content {
-    padding: 77px 32px;
-    max-width: 346px;
+    padding: 0 32px;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-width: 300px;
+    min-height: 300px;
+    border-radius: 6px;
+    box-shadow: 0px 4px 4px rgba($color: $dark, $alpha: 0.25);
+
+    @include mq("tablet-2") {
+      max-width: 100%;
+    }
+
+    @include mq("phone") {
+      padding: 76px 32px 38px;
+    }
   }
 
   &__text {
@@ -64,6 +106,16 @@
     text-transform: uppercase;
     margin-bottom: 12px;
     max-width: 175px;
+
+    @include mq("tablet-2") {
+      max-width: 100%;
+    }
+
+    @include mq("phone") {
+      font-size: 24px;
+      margin-bottom: auto;
+      max-width: 130px;
+    }
   }
 
   &__link {
@@ -72,6 +124,7 @@
     font-size: 14px;
     line-height: 1;
     position: relative;
+    max-width: max-content;
 
     &::after {
       content: "";
